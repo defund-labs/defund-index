@@ -1,5 +1,7 @@
 using HTTP
 using JSON
+using DotEnv
+DotEnv.config()
 
 function getValidators()
     validators = []
