@@ -2,6 +2,8 @@ using Mongoc
 using DotEnv
 DotEnv.config()
 
+ENV["SSL_CERT_DIR"] = "/etc/ssl/certs/"
+
 client = Mongoc.Client(ENV["MONGO_URL"])
 database = client["orbit-alpha-1"]
 
