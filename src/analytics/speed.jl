@@ -25,6 +25,8 @@ Threads.@threads for i in 1:length(items)
     push!(block_times, Float64(Dates.value(diff))/Float64(1000000))
 end
 
+println("Min: ", minimum(block_times))
+println("Max: ", maximum(block_times))
 println("Average: ", mean(block_times))
 println("Std: ", std(block_times))
 println("Median: ", median(block_times))
